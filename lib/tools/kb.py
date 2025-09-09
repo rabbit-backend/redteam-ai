@@ -19,7 +19,7 @@ vector_store = Chroma(
 )
 
 @tool(description="search for the knowledge base for any existing tools that can be used from pen testing")
-def search_cyber_kb(q: str):
+def cyber_kb(q: str):
     results = vector_store.similarity_search(
         q,
         k=2,
