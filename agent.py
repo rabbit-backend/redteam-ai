@@ -7,3 +7,9 @@ checkpointer = InMemorySaver()
 llm = ChatOllama(
     model="llama3.2"
 )
+
+agent = create_react_agent(
+    model=llm,
+    tools=[],
+    checkpointer=InMemorySaver()
+)
